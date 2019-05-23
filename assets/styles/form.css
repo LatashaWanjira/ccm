@@ -1,0 +1,65 @@
+/*FORM STYLING*/
+
+body {
+  background: linear-gradient(rgba(0, 113, 104, 0.5), rgba(0, 113, 104, 0.5)), url('../img/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100%;
+}
+
+input, select {
+  background: white;
+  border: 0;
+  border-bottom: 1px solid black;
+  padding: 0.5em 0;
+  transition: border-bottom 0.2s;
+}
+
+input:focus, select:focus {
+  outline: none;
+}
+
+input:focus {
+  border-bottom: 3px solid black;
+  transition: border-bottom 0.2s;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1em;
+}
+
+.form-small {
+  background: white;
+  position: relative;
+  box-sizing: border-box;
+  padding: 2em 3em;
+  width: 50%;
+  left: 50%;
+  margin: 7em 0 2em 0;
+  transform: translate(-50%);
+}
+
+@media only screen and (max-width:1024px) {
+  .form-small {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .form-small {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width:425px) {
+  .form-small {
+    width: 90%;
+    padding: 2em;
+  }
+  .form-small h1 {
+    font-size: 1.5em;
+  }
+}
