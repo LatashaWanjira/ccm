@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <!-- Themify Icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+        <!-- Ionicons -->
+        <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
         <!-- Slick JS -->
@@ -32,11 +34,31 @@
             <img src="assets/img/logo.png" alt="">
             <ul class="navbar-links">
                 <li class="nav-link"><a href="/">Home<span class="slider"></span></a></li>
-                <li class="nav-link"><a href="/#about-us">About Us<span class="slider"></span></a></li>
-                <li class="nav-link"><a href="/#services">Services<span class="slider"></span></a></li>
-                <li class="nav-link"><a href="/#partners">Partners<span class="slider"></span></a></li>
-                <li class="nav-link"><a href="/#contact">Contacts<span class="slider"></span></a></li>
-                <li class="nav-link"><button type="button" name="button" class="btn btn-solid"><a href="certificate-of-origin-request.html">Apply for Certificate of Origin</a></button></li>
+                <li class="nav-link"><a href="#">About Us <i class="icon ion-md-arrow-dropdown"></i><span class="slider"></span></a>
+                    <ul class="dropdown-list">
+                        <li class="nav-link"><a href="#">List Item</a></li>
+                        <li class="nav-link"><a href="#">List Item</a></li>
+                        <li class="nav-link"><a href="#">List Item</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link"><a href="#">Membership <i class="icon ion-md-arrow-dropdown"></i><span class="slider"></span></a>
+                    <ul class="dropdown-list">
+                        <li class="nav-link"><a href="#">List Item item</a></li>
+                        <li class="nav-link"><a href="#">List Item</a></li>
+                        <li class="nav-link"><a href="#">List Item</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link"><a href="#">Events <i class="icon ion-md-arrow-dropdown"></i><span class="slider"></span></a>
+                    <ul class="dropdown-list">
+                        <li class="nav-link"><a href="#">List Item</a></li>
+                        <li class="nav-link"><a href="#">List Item</a></li>
+                        <li class="nav-link"><a href="#">List Item</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link"><a href="#">Delegations<span class="slider"></span></a></li>
+                <li class="nav-link"><a href="/#contact">Contact<span class="slider"></span></a></li>
+                <li class="nav-link"><button type="button" name="button" class="btn btn-white"><a href="certificate-of-origin-request.html">Certificate of Origin</a></button></li>
+                <li class="nav-link"><a href="#">Login<span class="slider"></span></a></li>
             </ul>
         </nav>
         <!-- Mobile Menu -->
@@ -64,66 +86,91 @@
             <div class="floating-div">
                 <h1>Welcome to Mozambique Chamber of Commerce</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint veniam iure quasi, quaerat vitae incidunt voluptatem est qui ratione culpa.</p>
-                <button type="button" name="button" class="btn btn-solid"><a href="certificate-of-origin-request.html">Apply for Certificate of Origin</a></button>
+                <button type="button" name="button" class="btn btn-white"><a href="certificate-of-origin-request.html">Apply for Certificate of Origin</a></button>
             </div>
+            <div class="button-container"></div>
             <div class="ccm-options">
                 <div class="option">
-                    <i class="fas fa-user"></i>
-                    <h3><a href="#">Log In<span class="slider"></span></a></h3>
+                    <i class="icon ion-md-person-add"></i>
+                    <a href="#">Create a membership account with CCM</a>
                 </div>
                 <div class="option">
-                    <i class="fas fa-pencil-alt"></i>
-                    <h3><a href="#">Register<span class="slider"></span></a></h3>
+                    <i class="icon ion-md-log-in"></i>
+                    <a href="#">Have an existing account? Login</a>
                 </div>
                 <div class="option">
-                    <i class="fas fa-pencil-alt"></i>
-                    <h3><a href="#">Sign Up<span class="slider"></span></a></h3>
+                    <i class="icon ion-md-create"></i>
+                    <a href="#">Apply for Certificate of Origin</a>
                 </div>
                 <div class="option">
-                    <i class="fas fa-key"></i>
-                    <h3><a href="#">Track<span class="slider"></span></a></h3>
-                    <p>(Non-members)</p>
+                    <i class="icon ion-md-refresh"></i>
+                    <a href="#">Track your CO Application</a>
                 </div>
             </div>
         </div>
         <div id="about-us">
-            <h1>About Us</h1>
             <div class="content">
-                <div class="section">
-                    <h3>What is CCM?</h3>
-                    <p>Câmara de Comércio de Moçambique, CCM is an association of non-profit national businesses and businesses incorporated under Mozambican law, that are autonomous in terms of their administration, finances and assets. CCM is dedicated
-                        to promoting the harmonious development of its members’ businesses, with a view to ensuring their effective participation in the country’s economic activities.</p>
+                <div class="about-us-img">
+                    <div class="background-color">
+                        <img src="assets/img/bg3.jpeg" alt="">
+                    </div>
                 </div>
                 <div class="section">
-                    <h3>CCM's Mission</h3>
-                    <p>CCM’s core mission is to improve the competitiveness of its members and to help them to be active participants in international trade on a global scale. To enable this, CCM is charged with the responsibility of issuing a certificate
+                    <h5>First You Should Know</h5>
+                    <h3>About <span class="alt-colour">CCM</span></h3>
+                    <p>Câmara de Comércio de Moçambique, CCM is an association of non-profit national businesses and businesses incorporated under Mozambican law, that are autonomous in terms of their administration, finances and assets. CCM is dedicated
+                        to promoting the harmonious development of its members’ businesses, with a view to ensuring their effective participation in the country’s economic activities.</p>
+                    <p id="more">CCM’s core mission is to improve the competitiveness of its members and to help them to be active participants in international trade on a global scale. To enable this, CCM is charged with the responsibility of issuing a certificate
                         of origin for each product that is exported out of Mozambique. The Certificate of Origin provides proof that the product comes from Mozambique and acts as a crucial marketing tool from Mozambique as a source of such and other products.
                     </p>
+                    <button class="btn btn-solid" type="button" id="myBtn">Learn More</button>
                 </div>
             </div>
         </div>
         <div id="services">
-            <h1>Our Services</h1>
             <div class="content">
                 <div class="section">
-                    <h3>Lorem ipsum.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi amet consequatur hic fuga tempora eaque tenetur asperiores illum beatae, excepturi.</p>
-                    <a href="#">Learn More <i class="fas fa-arrow-right"></i><span class="slider"></span></a>
+                    <h5>Making Awesome Engagement</h5>
+                    <h3>What We <span class="alt-colour">Do</span></h3>
+                    <p>We are dedicated to promoting harmonious development of our associates' businesses in order to ensure their effective participation in the country's economic activities.</p>
+                    <div class="services-offered">
+                        <div class="service">
+                            <i class="icon ion-md-medal"></i>
+                            <h5>Export Certificate of Origin</h5>
+                            <hr class="short">
+                            <p>Apply for Certificate of Origin (CO) conveniently and effeciently.</p>
+                        </div>
+                        <div class="service">
+                            <i class="icon ion-md-done-all"></i>
+                            <h5>Territorial Implantation</h5>
+                            <hr class="short">
+                            <p>We will assist you with delegations and in establishment of offices abroad.</p>
+                        </div>
+                        <div class="service">
+                            <i class="icon ion-md-trending-up"></i>
+                            <h5>Internal Origanisation</h5>
+                            <hr class="short">
+                            <p>Let's help you get your organisation working together and in harmony.</p>
+                        </div>
+
+                        <div class="service">
+                            <i class="icon ion-ios-headset"></i>
+                            <h5>Business Support Center</h5>
+                            <hr class="short">
+                            <p>Let's assist you in getting customer insight and help you network effectively with others.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="section">
-                    <h3>Lorem ipsum.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi amet consequatur hic fuga tempora eaque tenetur asperiores illum beatae, excepturi.</p>
-                    <a href="#">Learn More <i class="fas fa-arrow-right"></i><span class="slider"></span></a>
-                </div>
-                <div class="section">
-                    <h3>Lorem ipsum.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi amet consequatur hic fuga tempora eaque tenetur asperiores illum beatae, excepturi.</p>
-                    <a href="#">Learn More <i class="fas fa-arrow-right"></i><span class="slider"></span></a>
+                <div class="services-img">
+                    <div class="background-color">
+                        <img src="assets/img/bg3.jpeg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
         <div id="blog">
-            <h1>Latest News</h1>
+            <h5>The following are the most recent news &amp; events</h5>
+            <h3>Recent <span class="alt-colour">News/Events</span></h3>
             <div class="content">
                 <a href="#" class="latest-blog">
                     <img src="assets/img/bg.jpg" alt="">
@@ -159,22 +206,46 @@
                             <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, suscipit.</p>
                         </div>
                     </a>
-                    <button type="button" name="button" class="btn btn-solid btn-right"><a href="#">More</a></button>
+                    <button type="button" name="button" class="btn btn-solid btn-right"><a href="#">Explore More</a></button>
                 </div>
             </div>
         </div>
+        <div id="createAcc">
+            <p>Create a membership account now and start enjoying VIP treatment on <strong>our services</strong></p>
+            <button type="button" name="button" class="btn btn-white"><a href="#">Create An Account</a></button>
+        </div>
         <div id="partners">
-
+            <h3>Our <span class="alt-colour">Partners</span></h3>
             <div class="carousel">
                 <a href="#"><img src="assets/img/logo.png" alt=""></a>
                 <a href="#"><img src="assets/img/logo.png" alt=""></a>
                 <a href="#"><img src="assets/img/logo.png" alt=""></a>
                 <a href="#"><img src="assets/img/logo.png" alt=""></a>
             </div>
+            <div class="dots-container"></div>
         </div>
         <div id="contact">
+            <div class="contact-info">
+                <ul>
+                    <li><strong>Address</strong><br>Rua Mateus Sansão Muthemba, nº 452 - Maputo (2,785.99 km) 1836 Maputo, Mozambique</span>
+                    </li>
+                    <li><strong>Phone: </strong> +258 21 491 970</li>
+                    <li><strong>Email: </strong> <a href="mailto:info@ccmoz.org.mz"> info@ccmoz.org.mz<span class="slider"></span></a></li>
+                </ul>
+                <hr>
+                <a href="#">Login<span class="slider"></span></a> | <a href="#">Create Account<span class="slider"></span></a>
+                <p>We respect your privacy.</p>
+            </div>
+            <div class="footer-doc">
+                <h3>Documents</h3>
+                <ul>
+                    <li><a href="#">Know the CCM<span class="slider"></span></a></li>
+                    <li><a href="#">CCM Development Plan<span class="slider"></span></a></li>
+                    <li><a href="#">CCM Statuses<span class="slider"></span></a></li>
+                </ul>
+            </div>
             <div class="footer-menu">
-                <h3>Links</h3>
+                <h3>Company</h3>
                 <ul>
                     <li><a href="#">Home<span class="slider"></span></a></li>
                     <li><a href="#">About Us<span class="slider"></span></a></li>
@@ -183,25 +254,23 @@
                     <li><a href="#">Contacts<span class="slider"></span></a></li>
                 </ul>
             </div>
-            <div class="contact-info">
-                <h3>Find Us</h3>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i><span>Rua Mateus Sansão Muthemba, nº 452 - Maputo (2,785.99 km) 1836 Maputo, Mozambique</span></li>
-                    <li><i class="fas fa-phone"></i><span>+258 21 491 970</span></li>
-                    <li><i class="fas fa-inbox"></i><a href="mailto:info@ccmoz.org.mz">info@ccmoz.org.mz<span class="slider"></span></a></li>
-                    <!-- <li><a href="#">11111111<span class="slider"></span></a></li> -->
-                </ul>
-            </div>
-            <div class="footer-icon">
-                <img src="assets/img/logo.png" alt="CCM">
+            <div class="footer-contact">
+                <h3>Quick Contact</h3>
+                <form class="" action="index.html" method="post">
+                    <input type="text" name="" placeholder="Name">
+                    <input type="email" name="" placeholder="Email Address">
+                    <input type="text" name="" placeholder="Subject">
+                    <textarea name="name" placeholder="Message"></textarea>
+                    <button type="submit" name="button" class="btn btn-solid">Send</button>
+                </form>
             </div>
         </div>
         <!-- Footer -->
         <footer>
-            <p>&copy; Câmara de Comércio de Moçambique
+            <p>&copy; 2002 -
                 <script type="text/javascript">
                     document.write(new Date().getFullYear());
-                </script>
+                </script> Câmara de Comércio de Moçambique
             </p>
         </footer>
 

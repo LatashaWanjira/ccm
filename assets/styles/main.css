@@ -1,8 +1,8 @@
 /*General Styling*/
 
 :root {
-  --primary: #007168;
-  --secondary: #FCE100;
+  --primary: #9A1B1B;
+  --secondary: #5D5858;
 }
 
 html {
@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  scr box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   min-height: 100vh;
@@ -18,18 +18,21 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+h5 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
 /*Anchor Tag Styling*/
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-a:hover {
-  /*text-decoration: underline;*/
-}
-
-a {
   position: relative;
   display: inline-block;
 }
@@ -54,26 +57,49 @@ a:hover .slider {
   width: 100%;
 }
 
+.alt-colour {
+  color: var(--primary);
+}
+
+hr.short {
+  width: 10%;
+  margin: 0;
+}
+
 /*Button Styling*/
 
 .btn {
   border: 2px solid;
-  border-radius: 0;
+  border-radius: 50px;
   padding: .5em 1em;
   font-size: 1em;
 }
 
 .btn-solid {
-  background: var(--secondary);
-  border-color: var(--secondary);
+  background: none;
+  border-color: var(--primary);
+  color: var(--primary);
+  transition: 0.5s;
+}
+
+.btn-white {
+  background: none;
+  border-color: white;
+  color: white;
+  transition: 0.5s;
+}
+
+.btn-white:hover {
+  background: white;
+  border-color: white;
   color: var(--primary);
   transition: 0.5s;
 }
 
 .btn-solid:hover {
-  background: none;
-  border-color: var(--secondary);
-  color: var(--secondary);
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
   transition: 0.5s;
 }
 
@@ -89,7 +115,6 @@ nav.navbar {
   justify-content: space-between;
   align-items: center;
   padding: 0em 3em;
-  border-bottom: 2px solid white;
   transition: background 0.5s;
 }
 
@@ -101,14 +126,31 @@ nav.navbar img {
 nav.navbar ul.navbar-links {
   list-style: none;
   display: flex;
-  width: 50%;
+  width: 57%;
+  font-size: 0.9em;
   justify-content: space-between;
   align-items: center;
   color: white;
 }
 
+.dropdown-list {
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  background: white;
+}
+
+.dropdown-list li {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  width: 100%;
+  padding: 0.5em 1em;
+}
+
 .scrolled {
   background: var(--primary);
+  border-bottom: 2px solid white;
   transition: background 0.5s;
 }
 
@@ -151,12 +193,12 @@ nav.sidebar ul {
 
 footer {
   box-sizing: border-box;
-  /*position: absolute;*/
+  position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
   text-align: right;
   padding-right: 3em;
-  border-top: 3px dashed var(--primary);
   background: var(--primary);
   color: white;
 }
@@ -185,10 +227,6 @@ footer p {
 }
 
 .backgrounds {
-  /*position: absolute;
-  z-index: -10;*/
-  /*width: 100%;
-  height: 80vh;*/
   width: 100%;
 }
 
@@ -198,28 +236,28 @@ footer p {
 }
 
 .background {
-  background: linear-gradient(rgba(0, 113, 104, 0.3), rgba(0, 113, 104, 0.3)), url('../img/bg.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 .bg2 {
-  background: linear-gradient(rgba(0, 113, 104, 0.3), rgba(0, 113, 104, 0.3)), url('../img/bg2.jpeg');
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/bg2.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 .bg3 {
-  background: linear-gradient(rgba(0, 113, 104, 0.3), rgba(0, 113, 104, 0.3)), url('../img/bg3.jpeg');
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/bg3.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 .dark-bg {
-  background: rgba(0, 113, 104, 0.8);
+  background: rgba(154, 27, 27, 0.8);
 }
 
 #landing .floating-div {
@@ -237,26 +275,37 @@ footer p {
   margin: 0;
 }
 
+.button-container {
+  position: absolute;
+  right: 100px;
+  bottom: 50px;
+}
+
+.slick-prev, .slick-next {
+  margin: 0;
+  font-size: 2em;
+  width: 25px;
+}
+
 .ccm-options {
   position: absolute;
-  bottom: -50px;
+  bottom: -80px;
   left: 50%;
   transform: translateX(-50%);
   display: grid;
-  grid-template-columns: repeat(4, 130px);
-  grid-auto-rows: 130px;
+  grid-template-columns: repeat(4, 200px);
+  grid-auto-rows: 150px;
   grid-gap: 2em;
-  text-align: center;
   justify-content: center;
   z-index: 1;
 }
 
 .ccm-options .option {
-  width: 130px;
+  width: 200px;
   box-sizing: border-box;
   padding: 1em;
   background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 15px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -265,38 +314,56 @@ footer p {
 }
 
 .ccm-options .option:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
   transition: transform 0.5s;
 }
 
 .ccm-options .option i {
-  font-size: 1.5em;
+  color: var(--primary);
+  font-size: 3em;
+  text-align: center;
 }
 
-.ccm-options .option p {
-  font-size: 12px;
-  margin: 0;
-}
-
-.ccm-options .option h3 {
-  margin-bottom: 0;
+.ccm-options .option a {
+  font-weight: 400;
+  font-size: 1em;
 }
 
 /*About Us Styling*/
 
 #about-us {
-  padding: 5em 15% 2em 15%;
+  padding: 8em 15% 2em 15%;
 }
 
 #about-us .content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+  grid-template-columns: 25% 75%;
   grid-column-gap: 3em;
   grid-row-gap: 1em;
 }
 
+#more {
+  display: none;
+}
+
+.background-color {
+  background: var(--primary);
+  height: 300px;
+  width: 210px;
+  position: relative;
+}
+
+.background-color img {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  height: 300px;
+  width: 210px;
+}
+
 #services {
-  background: #fef092;
+  background: #F8F8F8;
   padding: 2em 15% 2em 15%;
 }
 
@@ -304,6 +371,21 @@ footer p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1em;
+}
+
+.services-offered {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1em;
+}
+
+.service i {
+  font-size: 1.5em;
+}
+
+.services-offered h5, .services-offered p {
+  font-size: 0.8em;
+  margin: 0.5em 0;
 }
 
 /*Blog Styling*/
@@ -315,7 +397,8 @@ footer p {
 #blog .content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1em;
+  grid-gap: 20px;
+  align-items: start;
 }
 
 #blog img {
@@ -327,7 +410,7 @@ footer p {
 }
 
 .latest-blog, .small-blog {
-  background: #F5F5F5;
+  background: #F8F8F8;
 }
 
 a.latest-blog, a.small-blog {
@@ -336,14 +419,14 @@ a.latest-blog, a.small-blog {
 
 a.latest-blog:hover, a.small-blog:hover {
   transform: scale(1.02);
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 5px rgba(150, 150, 150, 0.5);
   transition: 0.3s;
 }
 
 .small-blog {
   display: grid;
   grid-template-columns: 45% 55%;
-  grid-gap: 1em;
+  /*grid-column-gap: 10px;*/
   align-items: center;
   margin-bottom: 1em;
 }
@@ -358,7 +441,6 @@ a.latest-blog:hover, a.small-blog:hover {
 }
 
 .news {
-  height: 7em;
   overflow: hidden;
 }
 
@@ -372,6 +454,7 @@ a.latest-blog:hover, a.small-blog:hover {
 
 #partners {
   box-sizing: border-box;
+  text-align: center;
 }
 
 #partners .carousel {
@@ -385,33 +468,38 @@ a.latest-blog:hover, a.small-blog:hover {
   padding: 0 2em;
 }
 
-#newsletter {
-  background: linear-gradient(rgba(0, 113, 104, 0.3), rgba(0, 113, 104, 0.3)), url('../img/bg.jpg');
-  background-size: cover;
-  box-sizing: border-box;
+.dots-container {
   position: relative;
-  height: 40vh;
-  display: grid;
-  grid-template-columns: 45% 55%;
-  color: white;
+  bottom: 20px;
 }
 
-#newsletter .floating-div {
-  box-sizing: border-box;
+.slick-dots {
   position: absolute;
-  width: 40%;
-  left: 60%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border: 3px solid white;
-  padding: 2em 2em 2em 5.5em;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1em;
+}
+
+#createAcc {
+  background: var(--primary);
+  position: relative;
+  padding: 2em 15%;
+  color: white;
+  text-align: center;
+}
+
+#createAcc p {
+  font-size: 1.8em;
 }
 
 #contact {
-  background: #7dc6c2;
+  background: var(--secondary);
+  color: #E6E6E6;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 2em;
   padding: 2em 15%;
+  font-size: 0.8em;
   /*justify-items: center;*/
 }
 
@@ -421,34 +509,39 @@ a.latest-blog:hover, a.small-blog:hover {
 }
 
 #contact li {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0.5em 0;
+  padding: 0.3em 0;
 }
 
-#contact li i {
-  margin-right: 1em;
-  font-size: 1.2em;
+#contact .slider {
+  background: #E6E6E6;
 }
 
-#contact li a .slider {
-  background-color: black;
+.footer-contact button {
+  font-size: 0.8em;
+  background: var(--primary);
+  color: white;
 }
 
-.footer-icon {
-  align-self: center;
-  justify-self: center;
+.footer-contact button:hover {
+  font-size: 0.8em;
+  background: white;
+  color: var(--primary);
 }
 
-.footer-icon img {
-  height: 150px;
-  width: auto;
+.footer-contact input, .footer-contact textarea {
+  width: 100%;
+  background: none;
+  border: 1px solid #8F8F8F;
+  margin: 0;
+  padding: 0.5em;
 }
 
 @media only screen and (max-width:1024px) {
   nav.navbar ul.navbar-links {
     width: 70%;
+  }
+  #about-us .content {
+    grid-template-columns: 30% 70%;
   }
 }
 
@@ -468,6 +561,34 @@ a.latest-blog:hover, a.small-blog:hover {
   .background, .bg2, .bg3 {
     height: 70vh;
   }
+  .ccm-options {
+    grid-template-columns: repeat(2, 200px);
+    grid-auto-rows: 150px;
+    bottom: -150px;
+    grid-gap: 1em;
+  }
+  .ccm-options .option {
+    width: 200px;
+  }
+  .ccm-options .option i {
+    font-size: 2.5em;
+  }
+  #about-us {
+    padding-top: 11em;
+  }
+  .background-color {
+    background: var(--primary);
+    height: 230px;
+    width: 150px;
+    position: relative;
+  }
+  .background-color img {
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    height: 230px;
+    width: 150px;
+  }
 }
 
 @media only screen and (max-width: 425px) {
@@ -485,10 +606,6 @@ a.latest-blog:hover, a.small-blog:hover {
     color: white;
     margin-right: 8em;
   }
-  #landing {
-    background: linear-gradient(rgba(0, 113, 104, 0.8), rgba(0, 113, 104, 0.8)), url('../img/bg.jpg');
-    height: 80vh;
-  }
   #landing .floating-div {
     width: 90%;
     left: 50%;
@@ -496,25 +613,31 @@ a.latest-blog:hover, a.small-blog:hover {
     padding: 2em;
     margin: 3em 0 5em 0;
   }
-  .background, .bg2, .bg3 {
-    height: 80vh;
+  .background, .bg2, .bg3, .dark-bg {
+    height: 70vh;
   }
   .ccm-options {
-    grid-template-columns: repeat(2, 120px);
-    grid-auto-rows: 120px;
+    grid-template-columns: repeat(2, 150px);
+    grid-auto-rows: 130px;
     bottom: -200px;
   }
   .ccm-options .option {
-    width: 120px;
+    width: 150px;
   }
   .ccm-options .option i {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
-  #about-us {
-    padding: 13em 10% 2em 10%;
+  .ccm-options .option a {
+    font-size: 0.8em;
+  }
+  .about-us-img {
+    display: none;
+  }
+  #about-us .content {
+    padding: 5em 3% 2em 3%;
+    display: block;
   }
   #services {
-    background: #fef092;
     padding: 2em 10%;
   }
   #blog {

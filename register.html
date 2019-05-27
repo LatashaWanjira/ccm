@@ -55,65 +55,48 @@
         </nav>
         <form class="form-small" action="index.html" method="post">
             <h1>Apply for <span class="alt-colour">Certificate of Origin</span></h1>
-            <div class="col2">
-                <div class="input-group">
-                    <label for="fname">First Name</label>
-                    <input type="text" name="fname" placeholder="e.g. John">
-                </div>
-                <div class="input-group">
-                    <label for="lname">Last Name</label>
-                    <input type="text" name="lname" placeholder="e.g. Doe">
-                </div>
+            <div class="input-group">
+                <label for="fname">First Name</label>
+                <input type="text" name="fname" placeholder="e.g. John">
+            </div>
+            <div class="input-group">
+                <label for="lname">Last Name</label>
+                <input type="text" name="lname" placeholder="e.g. Doe">
             </div>
             <div class="input-group">
                 <label for="company">Company Name</label>
                 <input type="text" name="company" placeholder="e.g. CCM">
             </div>
             <div class="input-group">
-                <label for="product">Product</label>
-                <input type="name" name="product" placeholder="Product Name">
-            </div>
-            <div class="col2">
-                <div class="input-group">
-                    <label for="packing">Packing</label>
-                    <input type="name" name="packing" placeholder="Product Quantity">
-                </div>
-                <div class="input-group">
-                    <label for="quantity">Quantity</label>
-                    <input type="name" name="quantity" placeholder="Product Quantity">
-                </div>
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="e.g. john@doe.com">
             </div>
             <div class="input-group">
-                <label for="firm">Product above is being exported by:</label>
-                <input type="text" name="firm" placeholder="Firm Name">
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone" placeholder="+258 21 345 678">
             </div>
-            <div class="col2">
-                <div class="input-group">
-                    <label for="from-port">From Port</label>
-                    <input list="from-ports" name="from-port" placeholder="- Please Select -">
-                    <datalist id="from-ports">
+            <div class="input-group">
+                <label for="region">State/Region</label>
+                <input list="regions" name="region" placeholder="- Please Select -">
+                <datalist id="regions">
                   <option value="ZA">
                   <option value="WB">
                 </datalist>
-                </div>
-                <div class="input-group">
-                    <label for="to-port">To Port</label>
-                    <input list="to-ports" name="to-port" placeholder="- Please Select -">
-                    <datalist id="to-ports">
+            </div>
+            <div class="input-group">
+                <label for="country">Country</label>
+                <input list="countries" name="country" placeholder="- Please Select -">
+                <datalist id="countries">
                   <option value="Mozambique">
                   <option value="Kenya">
                 </datalist>
-                </div>
             </div>
-            <div class="col2">
-                <div class="input-group">
-                    <label for="gross">Gross Weight</label>
-                    <input type="name" name="gross" placeholder="Product Gross Weight">
-                </div>
-                <div class="input-group">
-                    <label for="net">Net Weight</label>
-                    <input type="name" name="net" placeholder="Product Net Weight">
-                </div>
+            <div class="input-group">
+                <label for="frequency">How many exports do you currently average in a month?</label>
+                <input list="frequencies" name="frequency" placeholder="- Please Select -">
+                <datalist id="frequencies">
+                  <option value="1">
+                </datalist>
             </div>
             <button type="submit" name="button" class="btn btn-solid">Apply</button>
         </form>
